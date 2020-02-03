@@ -38,6 +38,6 @@ steps:
 - task: Npm@1
   inputs:
     command: 'publish'
-    workingDir: '**/*'
+    workingDir: ''
     publishRegistry: 'useFeed'
     publishFeed: '9ef1a3b2-5410-4320-abce-6479d0f97ca2/e23c3abc-0472-46dd-8a31-e69b59d77a96'
