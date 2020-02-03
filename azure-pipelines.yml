@@ -34,11 +34,10 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
- 
-- task: NuGetCommand@2
-  displayName: 'Publish NuGet package'
+
+- task: Npm@1
   inputs:
-    command: push
-    publishVstsFeed: 'sth/somefeed'
-    allowPackageConflicts: true
-  condition: succeeded()
+    command: 'publish'
+    workingDir: '**/*'
+    publishRegistry: 'useFeed'
+    publishFeed: '9ef1a3b2-5410-4320-abce-6479d0f97ca2/e23c3abc-0472-46dd-8a31-e69b59d77a96'
